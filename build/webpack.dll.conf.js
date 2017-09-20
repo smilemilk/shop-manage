@@ -1,11 +1,16 @@
 /**
  * Created by gexuhui on 17/9/20.
  */
+/**
+ * webpack自带UglifyJsPlugin压缩，随着项目扩大，打包时间越来越长，
+ * 方法其一，利用webpack.DllPlugin预打包，生成动态依赖库对重点内容不经常修改的库预打包生成依赖关系避免二次打包
+ * @type {webpack}
+ */
 const webpack = require('webpack');
 const path = require('path');
 const os = require('os');
 const UglifyJsparallelPlugin = require('webpack-uglify-parallel');
-const AssetsPlugin = require('assets-webpack-plugin');
+const AssetsPlugin = require('assets-webpack-plugin');//动态注入
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 let utils = require('./utils');
