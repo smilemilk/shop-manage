@@ -4,7 +4,12 @@
   "description": "vue",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "npm i && npm run build:dll",
+    "dev": "nodemon --watch server server/app.js",
+    "static": "node ./build/dev-server.js",
+    "dist": "node ./build/build.js",
+    "build": "npm run build:dll --production && node ./build/build.js",
+    "build:dll": "rimraf build/dll && webpack --config build/webpack.dll.conf.js",
   },
   "dependencies": {
     "axios": "^0.15.3",
