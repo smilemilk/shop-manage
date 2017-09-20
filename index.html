@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YOHO商铺管理平台</title>
+    <style>
+        .check-browers {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="loading-init" id="loading-init">正在初始化...</div>
+    <div class="check-browers" id="check-browers">
+        检测到您的浏览器版本过低，请下载最新浏览器：
+        <ul>
+            <li><a href="http://browser.qq.com/mac/index.html">QQ浏览器</a></li>
+            <li><a href="http://www.firefox.com.cn/">火狐浏览器</a></li>
+            <li><a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">Chrome浏览器</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    if (!Object.defineProperty) {
+        document.getElementById('loading-init').style.display = 'none';
+        document.getElementById('check-browers').style.display = 'block';
+    }
+</script>
+</body>
+</html>
